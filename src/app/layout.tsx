@@ -77,6 +77,14 @@ export default function RootLayout({
 
         <footer className="bg-gray-50 border-t border-gray-200 mt-12">
           <div className="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600">
+            <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm">
+              <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="text-blue-600 hover:text-blue-800">
+                Terms of Service
+              </a>
+            </div>
             <p>&copy; {new Date().getFullYear()} Gas Price Calculator. All rights reserved.</p>
             <p className="text-sm mt-2">Free online fuel cost and trip expense calculator</p>
           </div>
