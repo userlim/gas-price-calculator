@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://gas-price-calculator.vercel.app',
+      url: 'https://fuel-cost-calculator-ten.vercel.app',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,

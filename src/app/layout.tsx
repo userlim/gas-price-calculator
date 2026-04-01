@@ -3,7 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gas-price-calculator.vercel.app'),
+  metadataBase: new URL('https://fuel-cost-calculator-ten.vercel.app'),
   title: 'Gas Price Calculator – Free Fuel Cost Calculator Online',
   description:
     'Calculate fuel costs, trip expenses, and gas prices instantly. Free online gas price calculator with support for miles/kilometers and MPG/L per 100km. Perfect for trip planning and budgeting.',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Gas Price Calculator – Free Fuel Cost Calculator Online',
     description: 'Calculate your fuel costs and trip expenses instantly with our free online gas price calculator.',
-    url: 'https://gas-price-calculator.vercel.app',
+    url: 'https://fuel-cost-calculator-ten.vercel.app',
     siteName: 'Gas Price Calculator',
     type: 'website',
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     'max-video-preview': -1,
   },
   alternates: {
-    canonical: 'https://gas-price-calculator.vercel.app',
+    canonical: 'https://fuel-cost-calculator-ten.vercel.app',
   },
 };
 
