@@ -4,14 +4,14 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fuel-cost-calculator-ten.vercel.app'),
-  title: 'Gas Price Calculator – Free Fuel Cost Calculator Online',
+  title: 'Gas Price Calculator (Free, 2026) – Trip Fuel Cost Estimator',
   description:
-    'Calculate fuel costs, trip expenses, and gas prices instantly. Free online gas price calculator with support for miles/kilometers and MPG/L per 100km. Perfect for trip planning and budgeting.',
+    'Calculate fuel costs for any trip in seconds. Free 2026 gas calculator with MPG/L per 100km support. Plan your road trip budget — try it now.',
   keywords:
     'gas price calculator, fuel cost calculator, trip cost calculator, gas calculator, fuel calculator, miles per gallon, MPG, fuel efficiency',
   openGraph: {
-    title: 'Gas Price Calculator – Free Fuel Cost Calculator Online',
-    description: 'Calculate your fuel costs and trip expenses instantly with our free online gas price calculator.',
+    title: 'Gas Price Calculator (Free, 2026) – Trip Fuel Cost Estimator',
+    description: 'Calculate fuel costs for any trip in seconds. Free 2026 gas calculator with MPG/L per 100km support. Plan your road trip budget — try it now.',
     url: 'https://fuel-cost-calculator-ten.vercel.app',
     siteName: 'Gas Price Calculator',
     type: 'website',
@@ -79,7 +79,16 @@ export default function RootLayout({
 
         <footer className="bg-gray-50 border-t border-gray-200 mt-12">
           <div className="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600">
-            <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm">
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-3">
+              <span className="text-xs text-gray-400 font-semibold">Related Free Tools:</span>
+                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Gold Price Calculator</a>
+                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Inflation Calculator</a>
+                <a href="https://loan-payment-calculator-eosin.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Loan Calculator</a>
+                <a href="https://currency-exchange-calculator-wheat.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Currency Converter</a>
+                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">UtiliCalc</a>
+            </div>
+          <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm">
               <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800">
                 Privacy Policy
               </a>

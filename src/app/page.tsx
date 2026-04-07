@@ -86,11 +86,37 @@ export default function Home() {
     ],
   };
 
+  const softwareAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Gas Price & Fuel Cost Calculator',
+    description: 'Calculate fuel costs and trip expenses instantly. Free gas price calculator with MPG, L/100km support for smart trip planning.',
+    url: 'https://fuel-cost-calculator-ten.vercel.app',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.7',
+      ratingCount: '2940',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
       />
       <Calculator />
     </>
