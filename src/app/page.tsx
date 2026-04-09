@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import Calculator from './calculator';
 
 export const metadata: Metadata = {
-  title: 'Gas Price Calculator – Free Fuel Cost Calculator Online',
-  description:
-    'Calculate fuel costs, trip expenses, and gas prices instantly. Free online gas price calculator with support for miles/kilometers and MPG/L per 100km. Perfect for trip planning and budgeting.',
+  title: 'Free Gas Price Calculator (2026) – Estimate Fuel Cost for Any Trip',
+  description: 'Calculate trip fuel costs instantly. Enter distance, MPG, and gas price to get accurate estimates. Free fuel cost calculator — supports all fuel types, no signup.',
   keywords:
     'gas price calculator, fuel cost calculator, trip cost calculator, gas calculator, fuel calculator, miles per gallon, MPG, fuel efficiency, trip planner',
   openGraph: {
