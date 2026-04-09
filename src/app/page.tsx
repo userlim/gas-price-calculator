@@ -118,6 +118,32 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
       />
       <Calculator />
+
+      {/* Extended Content Section for SEO depth */}
+      <section id="content-depth-section" className="mt-12 max-w-3xl mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-6">Complete Guide</h2>
+        
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Understanding Fuel Cost Calculation</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `The basic fuel cost formula is: Total Cost = (Distance ÷ Fuel Efficiency) × Price per Unit. For US measurements, this becomes (Miles ÷ MPG) × Price per Gallon. For metric, it's (Kilometers × Liters per 100km ÷ 100) × Price per Liter. Our calculator handles both systems and lets you switch between them instantly.` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Factors That Affect Your Vehicle's Fuel Efficiency</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Real-world fuel efficiency often differs from EPA ratings by 10-20%. Several factors influence actual MPG: driving speed (fuel economy drops significantly above 50 mph), aggressive acceleration and braking (reduces efficiency by 15-30%), vehicle weight and cargo load, tire pressure (underinflated tires can reduce MPG by 3%), air conditioning use (can reduce efficiency by up to 25% in city driving), and terrain (mountainous routes consume significantly more fuel).` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Gas Price Trends and What Drives Them</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Gasoline prices are determined by four main factors: crude oil costs (about 54% of the price), refining costs (14%), distribution and marketing (16%), and federal/state taxes (16%). Prices fluctuate seasonally, typically rising in summer due to increased driving demand and the switch to more expensive summer-blend gasoline. Geopolitical events, OPEC production decisions, and natural disasters affecting refineries can cause sudden price spikes.` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Comparing Fuel Costs: Gas vs. Hybrid vs. Electric</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `The average American drives 13,500 miles per year. At 28 MPG and $3.50/gallon, annual gas cost is approximately $1,687. A hybrid averaging 50 MPG costs about $945. An electric vehicle at 3.5 miles/kWh and $0.13/kWh costs approximately $501. While EVs have the lowest fuel costs, the total cost of ownership should also factor in purchase price, maintenance, insurance, and depreciation.` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Tips for Saving Money on Fuel</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Beyond driving habits, several strategies can reduce fuel expenses: use gas price comparison apps (GasBuddy, Waze) to find the cheapest stations nearby, fill up on weekdays when prices tend to be lower, use grocery store fuel rewards programs, maintain your vehicle (clean air filters improve efficiency by up to 10%), and plan routes to minimize distance and avoid heavy traffic areas where stop-and-go driving wastes fuel.` }} />
+            </div>
+      </section>
     </>
   );
 }

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Terms of Service - Gas Price Calculator',
   description: 'Terms of Service for Gas Price Calculator.',
+  robots: { index: false, follow: true },
 }
 
 export default function TermsOfService() {
