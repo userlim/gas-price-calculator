@@ -519,7 +519,7 @@ export default function Calculator() {
         <select
           value={language}
           onChange={(e) => setLanguage(e.target.value as LanguageCode)}
-          className="tool-input w-40"
+          className="input w-40"
         >
           {languages.map((lang) => (
             <option key={lang.code} value={lang.code}>
@@ -532,16 +532,16 @@ export default function Calculator() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Distance Input */}
         <div className="card">
-          <label className="block text-sm font-semibold text-gray-300 mb-2">{t('distance')}</label>
+          <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">{t('distance')}</label>
           <input
             type="number"
             value={distanceValue}
             onChange={(e) => setDistanceValue(e.target.value)}
             placeholder="100"
-            className="tool-input mb-3"
+            className="input mb-3"
           />
           <div className="flex gap-2">
-            <label className="flex items-center text-gray-300">
+            <label className="flex items-center text-[var(--text-muted)]">
               <input
                 type="radio"
                 checked={useMiles}
@@ -550,7 +550,7 @@ export default function Calculator() {
               />
               {t('miles')}
             </label>
-            <label className="flex items-center text-gray-300">
+            <label className="flex items-center text-[var(--text-muted)]">
               <input
                 type="radio"
                 checked={!useMiles}
@@ -564,16 +564,16 @@ export default function Calculator() {
 
         {/* Fuel Efficiency Input */}
         <div className="card">
-          <label className="block text-sm font-semibold text-gray-300 mb-2">{t('fuelEfficiency')}</label>
+          <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">{t('fuelEfficiency')}</label>
           <input
             type="number"
             value={fuelEfficiencyValue}
             onChange={(e) => setFuelEfficiencyValue(e.target.value)}
             placeholder="25"
-            className="tool-input mb-3"
+            className="input mb-3"
           />
           <div className="flex gap-2">
-            <label className="flex items-center text-gray-300 text-sm">
+            <label className="flex items-center text-[var(--text-muted)] text-sm">
               <input
                 type="radio"
                 checked={useMPG}
@@ -582,7 +582,7 @@ export default function Calculator() {
               />
               {t('mpg')}
             </label>
-            <label className="flex items-center text-gray-300 text-sm">
+            <label className="flex items-center text-[var(--text-muted)] text-sm">
               <input
                 type="radio"
                 checked={!useMPG}
@@ -596,17 +596,17 @@ export default function Calculator() {
 
         {/* Gas Price Input */}
         <div className="card">
-          <label className="block text-sm font-semibold text-gray-300 mb-2">{t('gasPrice')}</label>
+          <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">{t('gasPrice')}</label>
           <input
             type="number"
             value={gasPriceValue}
             onChange={(e) => setGasPriceValue(e.target.value)}
             placeholder="3.50"
-            className="tool-input mb-3"
+            className="input mb-3"
             step="0.01"
           />
           <div className="flex gap-2">
-            <label className="flex items-center text-gray-300">
+            <label className="flex items-center text-[var(--text-muted)]">
               <input
                 type="radio"
                 checked={useGallon}
@@ -615,7 +615,7 @@ export default function Calculator() {
               />
               {t('perGallon')}
             </label>
-            <label className="flex items-center text-gray-300">
+            <label className="flex items-center text-[var(--text-muted)]">
               <input
                 type="radio"
                 checked={!useGallon}
@@ -629,7 +629,7 @@ export default function Calculator() {
 
         {/* Round Trip Toggle */}
         <div className="card flex items-center justify-between">
-          <label className="text-gray-300 font-semibold">{t('roundTrip')}</label>
+          <label className="text-[var(--text-muted)] font-semibold">{t('roundTrip')}</label>
           <input
             type="checkbox"
             checked={isRoundTrip}
@@ -652,17 +652,17 @@ export default function Calculator() {
           <h3 className="text-2xl font-bold text-gray-100 mb-6">{t('results')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="card">
-              <p className="text-gray-400 text-center mb-2">{t('totalFuel')}</p>
+              <p className="text-[var(--text-muted)] text-center mb-2">{t('totalFuel')}</p>
               <p className="tool-result">
                 {results.totalFuel.toFixed(2)} {useGallon ? 'gal' : 'L'}
               </p>
             </div>
             <div className="card">
-              <p className="text-gray-400 text-center mb-2">{t('totalCost')}</p>
+              <p className="text-[var(--text-muted)] text-center mb-2">{t('totalCost')}</p>
               <p className="tool-result">${results.totalCost.toFixed(2)}</p>
             </div>
             <div className="card">
-              <p className="text-gray-400 text-center mb-2">{t('costPerUnit')}</p>
+              <p className="text-[var(--text-muted)] text-center mb-2">{t('costPerUnit')}</p>
               <p className="tool-result">${results.costPerUnit.toFixed(2)}</p>
             </div>
           </div>
@@ -675,35 +675,35 @@ export default function Calculator() {
         <div className="space-y-6">
           <div className="card">
             <h4 className="font-bold text-gray-100 mb-2">How do I calculate gas cost for a trip?</h4>
-            <p className="text-gray-300">
+            <p className="text-[var(--text-muted)]">
               Enter your trip distance, vehicle fuel efficiency (MPG or L/100km), and current gas price. Our calculator will
               instantly show you the total fuel needed and cost.
             </p>
           </div>
           <div className="card">
             <h4 className="font-bold text-gray-100 mb-2">What is MPG and how is it different from L/100km?</h4>
-            <p className="text-gray-300">
+            <p className="text-[var(--text-muted)]">
               MPG (Miles Per Gallon) measures fuel efficiency in the US. L/100km (Liters per 100 kilometers) is used in most
               other countries. Our calculator supports both measurements.
             </p>
           </div>
           <div className="card">
             <h4 className="font-bold text-gray-100 mb-2">Can I use this calculator for round trips?</h4>
-            <p className="text-gray-300">
+            <p className="text-[var(--text-muted)]">
               Yes! Simply check the "Round Trip" option and enter your one-way distance. The calculator will automatically
               double the distance for your calculation.
             </p>
           </div>
           <div className="card">
             <h4 className="font-bold text-gray-100 mb-2">What is the cost per mile/km calculation?</h4>
-            <p className="text-gray-300">
+            <p className="text-[var(--text-muted)]">
               Cost per mile/km divides your total trip cost by the distance traveled, showing how much each mile or kilometer
               costs you in fuel.
             </p>
           </div>
           <div className="card">
             <h4 className="font-bold text-gray-100 mb-2">How accurate is this fuel cost calculator?</h4>
-            <p className="text-gray-300">
+            <p className="text-[var(--text-muted)]">
               The calculator provides accurate estimates based on the inputs you provide. Actual costs may vary due to driving
               conditions, terrain, and vehicle variations.
             </p>

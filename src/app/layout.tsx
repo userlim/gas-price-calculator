@@ -1,40 +1,39 @@
-import type { Metadata } from 'next';
-import Script from 'next/script';
-import './globals.css';
+import type { Metadata } from 'next'
+import './globals.css'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fuel-cost-calculator-ten.vercel.app'),
   title: 'Gas Price Calculator (Free, 2026) – Trip Fuel Cost Estimator',
-  description:
-    'Calculate fuel costs for any trip in seconds. Free 2026 gas calculator with MPG/L per 100km support. Plan your road trip budget — try it now.',
-  keywords:
-    'gas price calculator, fuel cost calculator, trip gas calculator, gas cost estimator, road trip fuel cost, mpg calculator, gas mileage calculator, fuel cost per mile, how much gas for my trip, driving cost calculator, gas prices near me, average gas price 2026, fuel efficiency calculator, commute cost calculator, gas budget calculator',
+  description: 'Calculate fuel costs for any trip in seconds. Free 2026 gas calculator with MPG/L per 100km support. Plan your road trip budget — try it now.',
+  keywords: 'gas price calculator, fuel cost calculator, trip gas calculator, gas cost estimator, road trip fuel cost, mpg calculator, gas mileage calculator, fuel cost per mile, how much gas for my trip, driving cost calculator, gas prices near me, average gas price 2026, fuel efficiency calculator, commute cost calculator, gas budget calculator',
+  metadataBase: new URL('https://fuel-cost-calculator-ten.vercel.app'),
   openGraph: {
     title: 'Gas Price Calculator (Free, 2026) – Trip Fuel Cost Estimator',
     description: 'Calculate fuel costs for any trip in seconds. Free 2026 gas calculator with MPG/L per 100km support. Plan your road trip budget — try it now.',
     url: 'https://fuel-cost-calculator-ten.vercel.app',
     siteName: 'Gas Price Calculator',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Gas Price Calculator',
-    description: 'Free online fuel and gas price calculator for trip planning.',
+    description: 'Calculate fuel costs for any trip in seconds. Free 2026 gas calculator with MPG/L per 100km support. Plan your road trip budget — try it now.',
   },
   robots: {
     index: true,
     follow: true,
-    'max-image-preview': 'large',
+    'max-image-preview': 'large' as const,
     'max-snippet': -1,
     'max-video-preview': -1,
   },
+  icons: { icon: '/favicon.svg' },
   alternates: {
     canonical: 'https://fuel-cost-calculator-ten.vercel.app',
     languages: {
       'en': 'https://fuel-cost-calculator-ten.vercel.app',
       'x-default': 'https://fuel-cost-calculator-ten.vercel.app',
     },
-  },
   },
 };
 
@@ -90,7 +89,7 @@ export default function RootLayout({
         </script>
         </head>
       <body>
-        <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+        <header className="sticky top-0 z-50 bg-white border-b border-[rgba(255,255,255,0.06)]">
           <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <h1 className="text-2xl font-bold text-gray-900">⛽ Gas Calculator</h1>
             <LanguageSwitcher />
@@ -99,16 +98,16 @@ export default function RootLayout({
 
         <main className="min-h-screen">{children}</main>
 
-        <footer className="bg-gray-50 border-t border-gray-200 mt-12">
-          <div className="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600">
+        <footer className="bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.06)] mt-12">
+          <div className="max-w-6xl mx-auto px-4 py-8 text-center text-[var(--text-secondary)]">
             
             <div className="flex flex-wrap justify-center gap-4 mb-3">
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Related Free Tools:</span>
-                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Gold Price Calculator</a>
-                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Inflation Rate Calculator</a>
-                <a href="https://loan-payment-calculator-eosin.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Loan Payment Calculator</a>
-                <a href="https://currency-exchange-calculator-wheat.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Currency Exchange Converter</a>
-                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">UtiliCalc All-in-One Tools</a>
+              <span className="text-xs text-[var(--text-secondary)] font-semibold uppercase tracking-wider">Related Free Tools:</span>
+                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Gold Price Calculator</a>
+                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Inflation Rate Calculator</a>
+                <a href="https://loan-payment-calculator-eosin.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Loan Payment Calculator</a>
+                <a href="https://currency-exchange-calculator-wheat.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Currency Exchange Converter</a>
+                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">UtiliCalc All-in-One Tools</a>
             </div>
           <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm">
               <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800">
@@ -129,7 +128,7 @@ export default function RootLayout({
 
 function LanguageSwitcher() {
   return (
-    <div className="text-gray-600 text-sm">
+    <div className="text-[var(--text-secondary)] text-sm">
       <span>Made with ❤️ for travelers</span>
     </div>
   );
