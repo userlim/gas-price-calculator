@@ -515,11 +515,11 @@ export default function Calculator() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-4xl font-bold text-gray-100">{t('title')}</h2>
+        <h2 className="text-4xl font-bold text-gray-900">{t('title')}</h2>
         <select
           value={language}
           onChange={(e) => setLanguage(e.target.value as LanguageCode)}
-          className="input w-40"
+          className="tool-input w-40"
         >
           {languages.map((lang) => (
             <option key={lang.code} value={lang.code}>
@@ -532,16 +532,16 @@ export default function Calculator() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Distance Input */}
         <div className="card">
-          <label className="block text-sm font-semibold text-[#8B95A1] mb-2">{t('distance')}</label>
+          <label className="block text-sm font-semibold text-gray-700 mb-2">{t('distance')}</label>
           <input
             type="number"
             value={distanceValue}
             onChange={(e) => setDistanceValue(e.target.value)}
             placeholder="100"
-            className="input mb-3"
+            className="tool-input mb-3"
           />
           <div className="flex gap-2">
-            <label className="flex items-center text-[#8B95A1]">
+            <label className="flex items-center text-gray-700">
               <input
                 type="radio"
                 checked={useMiles}
@@ -550,7 +550,7 @@ export default function Calculator() {
               />
               {t('miles')}
             </label>
-            <label className="flex items-center text-[#8B95A1]">
+            <label className="flex items-center text-gray-700">
               <input
                 type="radio"
                 checked={!useMiles}
@@ -564,16 +564,16 @@ export default function Calculator() {
 
         {/* Fuel Efficiency Input */}
         <div className="card">
-          <label className="block text-sm font-semibold text-[#8B95A1] mb-2">{t('fuelEfficiency')}</label>
+          <label className="block text-sm font-semibold text-gray-700 mb-2">{t('fuelEfficiency')}</label>
           <input
             type="number"
             value={fuelEfficiencyValue}
             onChange={(e) => setFuelEfficiencyValue(e.target.value)}
             placeholder="25"
-            className="input mb-3"
+            className="tool-input mb-3"
           />
           <div className="flex gap-2">
-            <label className="flex items-center text-[#8B95A1] text-sm">
+            <label className="flex items-center text-gray-700 text-sm">
               <input
                 type="radio"
                 checked={useMPG}
@@ -582,7 +582,7 @@ export default function Calculator() {
               />
               {t('mpg')}
             </label>
-            <label className="flex items-center text-[#8B95A1] text-sm">
+            <label className="flex items-center text-gray-700 text-sm">
               <input
                 type="radio"
                 checked={!useMPG}
@@ -596,17 +596,17 @@ export default function Calculator() {
 
         {/* Gas Price Input */}
         <div className="card">
-          <label className="block text-sm font-semibold text-[#8B95A1] mb-2">{t('gasPrice')}</label>
+          <label className="block text-sm font-semibold text-gray-700 mb-2">{t('gasPrice')}</label>
           <input
             type="number"
             value={gasPriceValue}
             onChange={(e) => setGasPriceValue(e.target.value)}
             placeholder="3.50"
-            className="input mb-3"
+            className="tool-input mb-3"
             step="0.01"
           />
           <div className="flex gap-2">
-            <label className="flex items-center text-[#8B95A1]">
+            <label className="flex items-center text-gray-700">
               <input
                 type="radio"
                 checked={useGallon}
@@ -615,7 +615,7 @@ export default function Calculator() {
               />
               {t('perGallon')}
             </label>
-            <label className="flex items-center text-[#8B95A1]">
+            <label className="flex items-center text-gray-700">
               <input
                 type="radio"
                 checked={!useGallon}
@@ -629,7 +629,7 @@ export default function Calculator() {
 
         {/* Round Trip Toggle */}
         <div className="card flex items-center justify-between">
-          <label className="text-[#8B95A1] font-semibold">{t('roundTrip')}</label>
+          <label className="text-gray-700 font-semibold">{t('roundTrip')}</label>
           <input
             type="checkbox"
             checked={isRoundTrip}
@@ -649,20 +649,20 @@ export default function Calculator() {
       {/* Results */}
       {results && (
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-100 mb-6">{t('results')}</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('results')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="card">
-              <p className="text-[#8B95A1] text-center mb-2">{t('totalFuel')}</p>
+              <p className="text-gray-600 text-center mb-2">{t('totalFuel')}</p>
               <p className="tool-result">
                 {results.totalFuel.toFixed(2)} {useGallon ? 'gal' : 'L'}
               </p>
             </div>
             <div className="card">
-              <p className="text-[#8B95A1] text-center mb-2">{t('totalCost')}</p>
+              <p className="text-gray-600 text-center mb-2">{t('totalCost')}</p>
               <p className="tool-result">${results.totalCost.toFixed(2)}</p>
             </div>
             <div className="card">
-              <p className="text-[#8B95A1] text-center mb-2">{t('costPerUnit')}</p>
+              <p className="text-gray-600 text-center mb-2">{t('costPerUnit')}</p>
               <p className="tool-result">${results.costPerUnit.toFixed(2)}</p>
             </div>
           </div>
@@ -670,40 +670,40 @@ export default function Calculator() {
       )}
 
       {/* SEO-friendly FAQ Section */}
-      <section className="mt-16 pt-12 border-t border-[#E5E8EB]">
-        <h3 className="text-2xl font-bold text-gray-100 mb-8">Frequently Asked Questions</h3>
+      <section className="mt-16 pt-12 border-t border-gray-200">
+        <h3 className="text-2xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h3>
         <div className="space-y-6">
           <div className="card">
-            <h4 className="font-bold text-gray-100 mb-2">How do I calculate gas cost for a trip?</h4>
-            <p className="text-[#8B95A1]">
+            <h4 className="font-bold text-gray-900 mb-2">How do I calculate gas cost for a trip?</h4>
+            <p className="text-gray-700">
               Enter your trip distance, vehicle fuel efficiency (MPG or L/100km), and current gas price. Our calculator will
               instantly show you the total fuel needed and cost.
             </p>
           </div>
           <div className="card">
-            <h4 className="font-bold text-gray-100 mb-2">What is MPG and how is it different from L/100km?</h4>
-            <p className="text-[#8B95A1]">
+            <h4 className="font-bold text-gray-900 mb-2">What is MPG and how is it different from L/100km?</h4>
+            <p className="text-gray-700">
               MPG (Miles Per Gallon) measures fuel efficiency in the US. L/100km (Liters per 100 kilometers) is used in most
               other countries. Our calculator supports both measurements.
             </p>
           </div>
           <div className="card">
-            <h4 className="font-bold text-gray-100 mb-2">Can I use this calculator for round trips?</h4>
-            <p className="text-[#8B95A1]">
+            <h4 className="font-bold text-gray-900 mb-2">Can I use this calculator for round trips?</h4>
+            <p className="text-gray-700">
               Yes! Simply check the "Round Trip" option and enter your one-way distance. The calculator will automatically
               double the distance for your calculation.
             </p>
           </div>
           <div className="card">
-            <h4 className="font-bold text-gray-100 mb-2">What is the cost per mile/km calculation?</h4>
-            <p className="text-[#8B95A1]">
+            <h4 className="font-bold text-gray-900 mb-2">What is the cost per mile/km calculation?</h4>
+            <p className="text-gray-700">
               Cost per mile/km divides your total trip cost by the distance traveled, showing how much each mile or kilometer
               costs you in fuel.
             </p>
           </div>
           <div className="card">
-            <h4 className="font-bold text-gray-100 mb-2">How accurate is this fuel cost calculator?</h4>
-            <p className="text-[#8B95A1]">
+            <h4 className="font-bold text-gray-900 mb-2">How accurate is this fuel cost calculator?</h4>
+            <p className="text-gray-700">
               The calculator provides accurate estimates based on the inputs you provide. Actual costs may vary due to driving
               conditions, terrain, and vehicle variations.
             </p>
