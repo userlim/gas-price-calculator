@@ -89,7 +89,7 @@ export default function RootLayout({
         </script>
         </head>
       <body>
-        <header className="sticky top-0 z-50 bg-white border-b border-[rgba(255,255,255,0.06)]">
+        <header className="sticky top-0 z-50 bg-white border-b border-[#F2F4F6]">
           <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <h1 className="text-2xl font-bold text-gray-900">⛽ Gas Calculator</h1>
             <LanguageSwitcher />
@@ -98,16 +98,16 @@ export default function RootLayout({
 
         <main className="min-h-screen">{children}</main>
 
-        <footer className="bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.06)] mt-12">
-          <div className="max-w-6xl mx-auto px-4 py-8 text-center text-[var(--text-secondary)]">
+        <footer className="bg-white border-t border-[#F2F4F6] mt-12">
+          <div className="max-w-6xl mx-auto px-4 py-8 text-center text-[#4E5968]">
             
             <div className="flex flex-wrap justify-center gap-4 mb-3">
-              <span className="text-xs text-[var(--text-secondary)] font-semibold uppercase tracking-wider">Related Free Tools:</span>
-                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Gold Price Calculator</a>
-                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Inflation Rate Calculator</a>
-                <a href="https://loan-payment-calculator-eosin.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Loan Payment Calculator</a>
-                <a href="https://currency-exchange-calculator-wheat.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Currency Exchange Converter</a>
-                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">UtiliCalc All-in-One Tools</a>
+              <span className="text-xs text-[#4E5968] font-semibold uppercase tracking-wider">Related Free Tools:</span>
+                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Gold Price Calculator</a>
+                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Inflation Rate Calculator</a>
+                <a href="https://loan-payment-calculator-eosin.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Loan Payment Calculator</a>
+                <a href="https://currency-exchange-calculator-wheat.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Currency Exchange Converter</a>
+                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">UtiliCalc All-in-One Tools</a>
             </div>
           <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm">
               <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800">
@@ -128,7 +128,7 @@ export default function RootLayout({
 
 function LanguageSwitcher() {
   return (
-    <div className="text-[var(--text-secondary)] text-sm">
+    <div className="text-[#4E5968] text-sm">
       <span>Made with ❤️ for travelers</span>
     </div>
   );
